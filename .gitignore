@@ -1,0 +1,9 @@
+*.bat
+*.json
+*.pyc
+*.xml
+.idea
+__pycache__
+fxcharts
+*-private.*
+*.ttf

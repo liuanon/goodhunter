@@ -1,0 +1,35 @@
+.node circle {
+	fill: #999;
+}
+.node text {
+	font: 10px "pingfang";
+	stroke-width: 0.618px;
+}
+.node text.cls-1, .node circle.cls-1{
+	font-size: 16px;
+	stroke: #ea5200;
+	fill: #ea5200;
+}
+.node text.cls-2, .node circle.cls-2{
+	font-size: 14px;
+	stroke: #0060bf;
+	fill: #0060bf;
+}
+.node text.cls-3, .node circle.cls-3{
+	font-size: 12px;
+	stroke: #359aff;
+	fill: #359aff;
+}
+.node--internal circle {
+	fill: #555;
+}
+.node--internal text {
+	font-size: 12.5px;
+	text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+.link {
+	fill: none;
+	stroke: #555;
+	stroke-opacity: 0.4;
+	stroke-width: 1.5px;
+}

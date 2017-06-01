@@ -1,0 +1,54 @@
+body {
+	background: white;
+}
+
+.main-chart {
+	font: 9px pingfang;
+	position: relative;
+}
+
+.node {
+	box-sizing: border-box;
+	position: absolute;
+	overflow: hidden;
+}
+
+.node-label {
+	padding: 4px;
+	line-height: 1em;
+	/*white-space: pre;*/
+}
+
+.cls-1{
+	color: #ea5200;
+	/*color: #f92672;*/
+	font-size: 12px;
+}
+
+.cls-2{
+	color: #0060bf;
+	/*color: #66d9ef;*/
+	font-size: 11px;
+}
+
+.cls-3{
+	color: #359aff;
+	font-size: 10px;
+}
+
+.cls-null{
+	color: #75715e;
+	font-size: 9px;
+}
+
+.node-parent-label{
+	font-size: 9px;
+	color: #75715e;
+	text-align: right;
+}
+
+.node-estimate{
+	font-size: 9px;
+	color: #75715e;
+	text-align: right;
+}

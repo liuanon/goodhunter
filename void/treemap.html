@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./static/css/main.css">
+		<link rel="stylesheet" type="text/css" href="./static/css/treemap.css">
+	</head>
+	<script type="text/javascript" src='./lib/jquery-3.2.1.min.js'></script>
+	<script type="text/javascript" src='./lib/d3.v4.min.js'></script>
+	<script type="text/javascript" src='./src/treemap.js'></script>
+	<script type="text/javascript" src='./src/parser.js'></script>
+	<body>
+		<div class="container">
+			<div class="main-chart"></div>
+		</div>
+	</body>
+	<footer>
+		<script type="text/javascript">
+			let chartWidth = document.body.offsetWidth;
+			let chartHeight = Math.max(document.body.offsetHeight, 800);
+			// let svg = d3.select(".main-chart")
+			// 	.append("svg")
+			// 	.attr("width", chartWidth)
+			// 	.attr("height", chartHeight);
+		
+			let rtmData;
+			
+			let treemap = new TreeMap({"w": chartWidth, "h":chartHeight});
+			d3.xml("rtm-rss.xml", function(e, d){
+				if (e) throw e;
+				rtmData = RTMRSSParser(d);
+				treemap.setData(rtmData);
+			});
+						
+		</script>
+	</footer>
+</html>
