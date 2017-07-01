@@ -8,8 +8,8 @@ def get_single_path_file_map(path):
 	# child node
 
 	ret = {'name': str(path.name), 'children': []}
-	
-	if path.isfile(): 
+
+	if path.isfile():
 		return ret
 
 	list_dir = path.listdir()
@@ -18,7 +18,7 @@ def get_single_path_file_map(path):
 
 	for i in list_dir:
 		ret['children'].append(get_single_path_file_map(i))
-	
+
 	return ret
 
 
@@ -43,8 +43,8 @@ def save_to_json(ret, output_path):
 
 
 if __name__ == '__main__':
-	parser = ArgumentParser(usage='python -m filemap -i file_path -o [output_path]')
-	parser.add_argument("-i", "--input",  
+	parser = ArgumentParser(usage='python filemap.py -i file_path -o [output_path]')
+	parser.add_argument("-i", "--input",
 		help="eg: D:/Git/void/void/tool DO NOT add quote")
 	parser.add_argument("-o", "--output", default="../output.json",
 		help="defalut=./output.json")

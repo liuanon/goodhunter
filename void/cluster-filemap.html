@@ -37,22 +37,22 @@
 			// let chartWidth = document.body.offsetWidth;
 			// let chartHeight = Math.max(document.body.offsetHeight, 1200);
 
-			let chartWidth = 4000;
-			let chartHeight = 4000;
+			let chartWidth = 1000;
+			let chartHeight = 1000;
 
 			let svg = d3.select(".main-chart")
 				.append("svg")
 				.attr("width", chartWidth)
 				.attr("height", chartHeight);
-		
+
 			let rtmData;
-			
+
 			let cluster = new Cluster(svg, {"w": chartWidth, "h":chartHeight});
 			d3.json("output.json", function(e, d){
 				if (e) throw e;
 				cluster.setData(d);
 			});
-						
+
 		</script>
 	</footer>
 </html>
